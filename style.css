@@ -1,0 +1,314 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+    background: #f5f7fa;
+    color: #d0e7ff;
+    scroll-behavior: smooth;
+  }
+  
+  
+  /* Cabeçalho */
+  header {
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  header .logo {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: #ffd700;
+  }
+  
+ /* Hero em forma de círculo futurista */
+.hero {
+    width: 600px;
+    height: 300px;
+    margin: 7rem auto;
+    border-radius: 10%; /* deixa redondo */
+    background: radial-gradient(circle at top left, #6a11cb, #2575fc, #0d0d0d);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2), 
+                0 0 60px rgba(106, 17, 203, 0.4), 
+                0 0 100px rgba(37, 117, 252, 0.3);
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .hero h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero h2 span {
+    color: #00fff2ab;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Animação de flutuar */
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 0.9rem 1.5rem;
+    margin-top: 1rem;
+    background: rgba(64, 238, 238, 0.5); /* transparente e suave */
+    color: #ffffff; /* branco suave */
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(64, 238, 238, 0.4); /* sombra leve */
+    backdrop-filter: blur(4px); /* efeito vidro leve */
+    transition: all 0.3s ease;
+  }
+  
+  /* Efeito hover moderno */
+  .btn:hover {
+    transform: translateY(-5px) scale(1.05); /* sobe e cresce levemente */
+    box-shadow: 0 8px 25px rgba(64, 238, 238, 0.6); /* sombra mais intensa */
+    background: rgba(64, 238, 238, 0.8); /* aumenta opacidade ao passar mouse */
+  }
+  
+  .btn:hover {
+    background: linear-gradient(135deg, #40eeee, #2575fc); /* degradê azul/ciano */
+    color: #ffffff; /* texto branco suave */
+    box-shadow: 0 8px 25px rgba(64, 238, 238, 0.6); /* sombra mais intensa */
+  }
+  
+  .btn.small {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Seções */
+  section {
+    padding: 2rem 3rem;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  section h2 {
+    padding-top: -3rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #1f11e4ce;
+  }
+  section p{
+    color: #ffffff;
+    text-shadow: 0 0 5px rgba(208, 231, 255, 0.7);
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Projetos */
+  .projetos-container {
+    display: flex;
+    justify-content: center; /* centraliza o card */
+    margin-top: 2rem;
+    gap: 2rem; /* espaço caso futuramente adicione mais cards */
+  }
+  
+  /* Card Em Breve */
+  .projeto {
+    background: rgba(255, 255, 255, 0.1); /* leve transparência */
+    backdrop-filter: blur(8px); /* efeito vidro */
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    text-align: center;
+    width: 250px;
+    transition: transform 0.5s, box-shadow 0.5s;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Efeito hover */
+  .projeto:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.4);
+  }
+  
+  /* Texto do card */
+  .projeto h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #ffd700; /* dourado combinando com o fundo espacial */
+  }
+  
+  .projeto p {
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  /* Pequeno efeito de estrela animada dentro do card */
+  .projeto {
+    width: 300px;           /* tamanho maior do card */
+    padding: 2.5rem;        /* espaço interno */
+    position: relative;      /* necessário para o ::before */
+    overflow: visible;       /* permite que a estrela apareça fora do card */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    text-align: center;
+    transition: transform 0.5s, box-shadow 0.5s;
+  }
+  
+  /* Estrela animada */
+  .projeto::before {
+    content: "✨";
+    position: absolute;
+    top: -10px;           /* posição fora do card */
+    right: -10px;
+    font-size: 2.5rem;    /* aumenta o tamanho da estrela */
+    animation: twinkle 2s infinite alternate;
+  }
+  
+  @keyframes twinkle {
+    0% { opacity: 0.2; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 0.2; transform: scale(0.8); }
+  }
+  
+  /* Contato */
+  #contato p {
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+  
+  #contato a {
+    color: #2575fc;
+    text-decoration: none;
+  }
+  
+  #contato a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Rodapé */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: white;
+  }
+
+  /* Fundo espacial */
+#stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* garante que fique atrás */
+    background: black;
+  }
+  
+  /* Garante que todo conteúdo fique acima do canvas */
+  body, header, section, footer {
+    position: relative;
+    z-index: 1;
+  }
+ /* Container de imagens de habilidades */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin: 5rem 0;
+    flex-wrap: wrap;
+  }
+  
+  .skill-card {
+    text-align: center;
+    width: 120px;
+    background: rgba(255,255,255,0.1); /* leve transparência para combinar com fundo espacial */
+    padding: 1rem;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 15px rgba(255,255,255,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(255,255,255,0.4);
+  }
+  
+  .skill-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0.5rem;
+  }
+
+  .contato-container {
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    margin-top: 2rem; /* espaço acima, opcional */
+  }
+  .btn.whatsapp {
+    background: linear-gradient(135deg, #3fb96c, #1ebe57); /* verde gradiente suave */
+    color: #ffffff; /* texto branco */
+    padding: 0.5rem 1.2rem; /* mais fino e elegante */
+    border-radius: 20px; /* borda arredondada */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem; /* tamanho de fonte mais leve */
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4); /* sombra suave */
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: -0.5rem;
+  }
+  
+  /* Efeito hover */
+  .btn.whatsapp:hover {
+    transform: translateY(-3px) scale(1.05); /* sobe levemente */
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.6); /* sombra mais intensa */
+    background: linear-gradient(135deg, #1ebe57, #25d366); /* gradiente invertido */
+  }
+
+ 
+  
