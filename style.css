@@ -309,6 +309,100 @@
     box-shadow: 0 8px 20px rgba(37, 211, 102, 0.6); /* sombra mais intensa */
     background: linear-gradient(135deg, #1ebe57, #25d366); /* gradiente invertido */
   }
+/* Responsivo */
+@media (max-width: 1024px) {
+  /* Hero menor e ajustável */
+  .hero {
+    width: 90%;
+    height: auto;
+    padding: 3rem 1.5rem;
+    border-radius: 15%;
+  }
+
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    font-size: 0.95rem;
+    padding: 0.8rem 1.2rem;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Hero mais compacto */
+  .hero h2 {
+    font-size: 1.4rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .skills-container,
+  .projetos-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .skill-card,
+  .projeto {
+    width: 80%;
+    max-width: 300px;
+    padding: 1.5rem;
+  }
+
+  .btn {
+    width: 80%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajustes finais para celular pequeno */
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero p {
+    font-size: 0.85rem;
+  }
+
+  .skill-card img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .projeto {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  header .logo {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+    gap: 8px;
+  }
+}
 
  
+
   
